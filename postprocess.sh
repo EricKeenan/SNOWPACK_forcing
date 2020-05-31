@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# Concactenate yearly files into a single timeseries
 g=$(ls -d output/output_[0-9][0-9][0-9][0-9] | tail -1)
 for f in ${g}/*smet
 do
