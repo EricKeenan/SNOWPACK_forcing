@@ -14,13 +14,14 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=eric.keenan@colorado.edu
 
-# Load modules
+# Module loading and basic setup
+mkdir -p log
 export LD_LIBRARY_PATH=/scratch/summit/erke2265/meteoio_smet_creation/usr/lib/
 ml intel; ml impi; ml proj; ml cmake; ml netcdf
 
 # Define variable year and create output directory 
 yr=$(echo ${SLURM_ARRAY_TASK_ID} | awk '{print 1980+($1-1)}')
-mkdir output/output_${yr}
+mkdir -p output/output_${yr}
 cd io_files
 
 # Create new ini file for each year

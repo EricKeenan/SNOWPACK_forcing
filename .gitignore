@@ -6,3 +6,6 @@
 sbatch_out_files/*
 log/*
 output/*
+
+# File exceptions
+!sbatch_out_files/.gitkeep
