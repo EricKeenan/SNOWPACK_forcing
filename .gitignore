@@ -6,6 +6,8 @@
 sbatch_out_files/*
 log/*
 output/*
+io_files/*
 
 # File exceptions
 !sbatch_out_files/.gitkeep
+!io_files/io.ini
