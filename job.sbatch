@@ -28,7 +28,7 @@ mkdir -p output/output_${yr}
 cd io_files
 
 # Create new ini file for each year
-sed 's/\/scratch\/summit\/erke2265\/MERRA2\/\//\/scratch\/summit\/erke2265\/MERRA2\/'${yr}'\//' io.ini > io_${yr}.ini
+sed 's/\.\.\/\.\.\/MERRA2\/\//\.\.\/\.\.\/MERRA2\/'${yr}'\//' io.ini > io_${yr}.ini
 sed -i 's/output\//output\/output_'${yr}'\//' io_${yr}.ini
 
 # Create .smet files for each year

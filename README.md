@@ -10,5 +10,4 @@ This workflow currently digests hourly MERRA-2 meteorological data into suitable
 3. Concatenate and zip individual yearly atmospheric forcing files into a continous time series: `$ bash postprocess.sh`
 
 ## Remaining things to do
-1. Update absolute paths to relative paths so that this workflow can be used on an arbitrary disk on any machine. 
-2. Update workflow so that it can digest an arbitrary climate model. 
+1. Update workflow so that it can digest an arbitrary climate model. 
