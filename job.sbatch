@@ -16,10 +16,7 @@
 
 # Module loading and basic setup
 mkdir -p log
-pushd usr/lib/
-path=$(pwd)
-popd
-export LD_LIBRARY_PATH=${path}
+export LD_LIBRARY_PATH=$(pwd)/usr/lib/:${LD_LIBRARY_PATH}
 ml intel; ml impi; ml proj; ml cmake; ml netcdf
 
 # Define variable year and create output directory 
