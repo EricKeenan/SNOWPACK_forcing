@@ -1,8 +1,8 @@
-IF(NOT EXISTS "/scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/install_manifest.txt")
-  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/install_manifest.txt\"")
-ENDIF(NOT EXISTS "/scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/install_manifest.txt")
+IF(NOT EXISTS "/scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/install_manifest.txt")
+  MESSAGE(FATAL_ERROR "Cannot find install manifest: \"/scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/install_manifest.txt\"")
+ENDIF(NOT EXISTS "/scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/install_manifest.txt")
 
-FILE(READ "/scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/install_manifest.txt" files)
+FILE(READ "/scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/install_manifest.txt" files)
 STRING(REGEX REPLACE "\n" ";" files "${files}")
 FOREACH(file ${files})
   MESSAGE(STATUS "Uninstalling \"$ENV{DESTDIR}${file}\"")

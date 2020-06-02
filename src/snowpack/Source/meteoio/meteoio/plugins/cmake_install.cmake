@@ -1,8 +1,8 @@
-# Install script for directory: /projects/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/meteoio/plugins
+# Install script for directory: /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/meteoio/plugins
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "../../../../../meteoio_smet_creation/usr")
+  set(CMAKE_INSTALL_PREFIX "../../../../usr")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 

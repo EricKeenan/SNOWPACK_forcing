@@ -2,7 +2,7 @@
 
 #SBATCH --nodes=1                         # Number of requested nodes
 #SBATCH --account=ucb164_summit1 
-#SBATCH --time=06:00:00                   # Max wall time
+#SBATCH --time=00:01:00                   # Max wall time
 #SBATCH --qos=normal                      # Specify testing QOS
 #SBATCH --partition=shas                  # Specify Summit haswell nodes
 #SBATCH --ntasks=1                       # Number of tasks per job
@@ -18,6 +18,8 @@
 mkdir -p log
 export LD_LIBRARY_PATH=$(pwd)/usr/lib/:${LD_LIBRARY_PATH}
 ml intel; ml impi; ml proj; ml cmake; ml netcdf
+
+ldd ./data_converter
 
 # Define variable year and create output directory 
 yr=$(echo ${SLURM_ARRAY_TASK_ID} | awk '{print 1980+($1-1)}')

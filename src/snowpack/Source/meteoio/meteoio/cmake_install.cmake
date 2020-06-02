@@ -1,8 +1,8 @@
-# Install script for directory: /projects/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/meteoio
+# Install script for directory: /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/meteoio
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "../../../../../meteoio_smet_creation/usr")
+  set(CMAKE_INSTALL_PREFIX "../../../../usr")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -46,12 +46,12 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xlibrariesx" OR NOT CMAKE_INSTALL_CO
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHECK
            FILE "${file}"
-           RPATH "../../../../../meteoio_smet_creation/usr/lib:/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/gcc/6.1.0/lib")
+           RPATH "../../../../usr/lib:/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/intel/17.4/lib")
     endif()
   endforeach()
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES
-    "/projects/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/lib/libmeteoio.so.2.8.1"
-    "/projects/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/lib/libmeteoio.so.2"
+    "/scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/lib/libmeteoio.so.2.8.1"
+    "/scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/lib/libmeteoio.so.2"
     )
   foreach(file
       "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmeteoio.so.2.8.1"
@@ -61,8 +61,8 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xlibrariesx" OR NOT CMAKE_INSTALL_CO
        NOT IS_SYMLINK "${file}")
       file(RPATH_CHANGE
            FILE "${file}"
-           OLD_RPATH "/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/gcc/6.1.0/lib:::::::::::::::::::::::::::::::::::::::::::::"
-           NEW_RPATH "../../../../../meteoio_smet_creation/usr/lib:/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/gcc/6.1.0/lib")
+           OLD_RPATH "/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/intel/17.4/lib::::::::::::::::::::"
+           NEW_RPATH "../../../../usr/lib:/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/intel/17.4/lib")
       if(CMAKE_INSTALL_DO_STRIP)
         execute_process(COMMAND "/usr/bin/strip" "${file}")
       endif()
@@ -75,15 +75,15 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xlibrariesx" OR NOT CMAKE_INSTALL_CO
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmeteoio.so")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmeteoio.so"
-         RPATH "../../../../../meteoio_smet_creation/usr/lib:/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/gcc/6.1.0/lib")
+         RPATH "../../../../usr/lib:/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/intel/17.4/lib")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/projects/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/lib/libmeteoio.so")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib" TYPE SHARED_LIBRARY FILES "/scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/lib/libmeteoio.so")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmeteoio.so" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmeteoio.so")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmeteoio.so"
-         OLD_RPATH "/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/gcc/6.1.0/lib:::::::::::::::::::::::::::::::::::::::::::::"
-         NEW_RPATH "../../../../../meteoio_smet_creation/usr/lib:/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/gcc/6.1.0/lib")
+         OLD_RPATH "/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/intel/17.4/lib::::::::::::::::::::"
+         NEW_RPATH "../../../../usr/lib:/curc/sw/netcdf/4.3.3.1/intel/16.0.3/lib:/curc/sw/proj/4.9.2/intel/17.4/lib")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/libmeteoio.so")
     endif()

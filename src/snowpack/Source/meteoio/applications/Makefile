@@ -48,10 +48,10 @@ RM = /curc/sw/cmake/3.14.1/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /projects/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio
+CMAKE_SOURCE_DIR = /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio
+CMAKE_BINARY_DIR = /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -95,7 +95,7 @@ install/fast: preinstall/fast
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && /curc/sw/cmake/3.14.1/bin/cpack --config ./CPackSourceConfig.cmake /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/CPackSourceConfig.cmake
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && /curc/sw/cmake/3.14.1/bin/cpack --config ./CPackSourceConfig.cmake /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -106,7 +106,7 @@ package_source/fast: package_source
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && /curc/sw/cmake/3.14.1/bin/cpack --config ./CPackConfig.cmake
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && /curc/sw/cmake/3.14.1/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -148,14 +148,14 @@ list_install_components/fast: list_install_components
 
 # The main all target
 all: cmake_check_build_system
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(CMAKE_COMMAND) -E cmake_progress_start /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/CMakeFiles /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/applications/CMakeFiles/progress.marks
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(MAKE) -f CMakeFiles/Makefile2 applications/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio/CMakeFiles 0
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(CMAKE_COMMAND) -E cmake_progress_start /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/CMakeFiles /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/applications/CMakeFiles/progress.marks
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(MAKE) -f CMakeFiles/Makefile2 applications/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(MAKE) -f CMakeFiles/Makefile2 applications/clean
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(MAKE) -f CMakeFiles/Makefile2 applications/clean
 .PHONY : clean
 
 # The main clean target
@@ -165,22 +165,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(MAKE) -f CMakeFiles/Makefile2 applications/preinstall
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(MAKE) -f CMakeFiles/Makefile2 applications/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(MAKE) -f CMakeFiles/Makefile2 applications/preinstall
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(MAKE) -f CMakeFiles/Makefile2 applications/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 applications/CMakeFiles/meteoio_timeseries.dir/rule:
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(MAKE) -f CMakeFiles/Makefile2 applications/CMakeFiles/meteoio_timeseries.dir/rule
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(MAKE) -f CMakeFiles/Makefile2 applications/CMakeFiles/meteoio_timeseries.dir/rule
 .PHONY : applications/CMakeFiles/meteoio_timeseries.dir/rule
 
 # Convenience name for target.
@@ -190,7 +190,7 @@ meteoio_timeseries: applications/CMakeFiles/meteoio_timeseries.dir/rule
 
 # fast build rule for target.
 meteoio_timeseries/fast:
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(MAKE) -f applications/CMakeFiles/meteoio_timeseries.dir/build.make applications/CMakeFiles/meteoio_timeseries.dir/build
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(MAKE) -f applications/CMakeFiles/meteoio_timeseries.dir/build.make applications/CMakeFiles/meteoio_timeseries.dir/build
 .PHONY : meteoio_timeseries/fast
 
 meteoio_timeseries.o: meteoio_timeseries.cc.o
@@ -199,7 +199,7 @@ meteoio_timeseries.o: meteoio_timeseries.cc.o
 
 # target to build an object file
 meteoio_timeseries.cc.o:
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(MAKE) -f applications/CMakeFiles/meteoio_timeseries.dir/build.make applications/CMakeFiles/meteoio_timeseries.dir/meteoio_timeseries.cc.o
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(MAKE) -f applications/CMakeFiles/meteoio_timeseries.dir/build.make applications/CMakeFiles/meteoio_timeseries.dir/meteoio_timeseries.cc.o
 .PHONY : meteoio_timeseries.cc.o
 
 meteoio_timeseries.i: meteoio_timeseries.cc.i
@@ -208,7 +208,7 @@ meteoio_timeseries.i: meteoio_timeseries.cc.i
 
 # target to preprocess a source file
 meteoio_timeseries.cc.i:
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(MAKE) -f applications/CMakeFiles/meteoio_timeseries.dir/build.make applications/CMakeFiles/meteoio_timeseries.dir/meteoio_timeseries.cc.i
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(MAKE) -f applications/CMakeFiles/meteoio_timeseries.dir/build.make applications/CMakeFiles/meteoio_timeseries.dir/meteoio_timeseries.cc.i
 .PHONY : meteoio_timeseries.cc.i
 
 meteoio_timeseries.s: meteoio_timeseries.cc.s
@@ -217,7 +217,7 @@ meteoio_timeseries.s: meteoio_timeseries.cc.s
 
 # target to generate assembly for a file
 meteoio_timeseries.cc.s:
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(MAKE) -f applications/CMakeFiles/meteoio_timeseries.dir/build.make applications/CMakeFiles/meteoio_timeseries.dir/meteoio_timeseries.cc.s
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(MAKE) -f applications/CMakeFiles/meteoio_timeseries.dir/build.make applications/CMakeFiles/meteoio_timeseries.dir/meteoio_timeseries.cc.s
 .PHONY : meteoio_timeseries.cc.s
 
 # Help Target
@@ -249,6 +249,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /scratch/summit/erke2265/meteoio_smet_creation/src/snowpack/Source/meteoio && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /scratch/summit/erke2265/SNOWPACK_forcing/src/snowpack/Source/meteoio && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
